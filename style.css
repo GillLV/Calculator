@@ -1,3 +1,18 @@
+
+html{
+    height: 95%;
+}
+
+body{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+
+width:100%; 
+height:100%;
+}
+
 .bodyCalc
 {
     display: flex;
@@ -7,12 +22,16 @@
     align-items: center;
 
     min-height: 700px;
+    min-width: 800px;
     max-width: 800px;
     border: 2px solid #737373;
     border-bottom: 10px solid #696868;
     border-right: 10px solid #696868;  
     border-radius: 8px;
     background-color: #c2c2c2;
+
+    margin-bottom:0;
+    padding-bottom:0;
 }
 
 .brand
@@ -26,6 +45,15 @@
     color: #383838;  
 }
 
+@font-face{
+    font-family: DisplayFont;
+    src: url('resources/Digital-7-V7.tff') format('truetype');
+    src: url('resources/Digital-7-V7.otf') format('opentype');
+    src: url('resources/Digital-7-V7.woff') format('woff');
+    
+}
+
+
 .display
 {
     min-width: 645px;
@@ -35,7 +63,10 @@
 
     background-color: #a6a89e;
 
-    box-shadow: inset 0px 0px 2px 2px #868780
+    box-shadow: inset 0px 0px 2px 2px #868780;
+
+    font-family: DisplayFont;
+    font-size: 80px;
 }
 
 .btnBox
@@ -72,7 +103,7 @@
     box-shadow: 2px 2px 3px #696868;
 }
 
-.btnOp
+.btnOp, .btnClr, .btnDel
 {
     min-width: 150px;
     min-height: 100px;
@@ -82,7 +113,7 @@
     box-shadow: 2px 2px 3px #696868;
 }
 
-.row1 .btnOp
+.row1 .btnClr, .row1 .btnDel
 {
     background-color: #d69ca7;
 }
@@ -101,4 +132,9 @@
     color: #383838;
     border: none;
     box-shadow: 2px 2px 3px #696868;
+}
+
+a{
+    color:#383838;
+    font-style: normal;
 }
